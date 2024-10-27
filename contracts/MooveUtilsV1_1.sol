@@ -66,7 +66,6 @@ contract MooveUtilsV1_1 {
       } else if (lastWinnerTokenId == tokenCounter - 1){
         winnerTokenId--;
       } else {
-
         //Se winnerTokenId pari assegna la vittoria al token successivo
         if(winnerTokenId % 2 == 0){
           winnerTokenId++;

@@ -24,7 +24,7 @@ contract MooveNFT is VRFConsumerBaseV2Plus, ERC721URIStorage, MooveUtilsV1_1 {
 
     mapping(uint256 => address) public requestIdToSender;
     mapping(uint256 => uint256) public requestIdToTokenId;
-    mapping(uint256 => uint8) public requestIdToVechileType;
+    mapping(uint256 => uint8) public requestIdToVehicleType;
 
     event NFTRequest(uint256 requestId, uint256 numWords);
     event NFTCreated(uint256 indexed tokenId, uint256 randomNumber);
@@ -58,7 +58,7 @@ contract MooveNFT is VRFConsumerBaseV2Plus, ERC721URIStorage, MooveUtilsV1_1 {
         require(msg.value >= creationFee, "Insufficient fee");
         uint256 requestId = requestRandomWords(false);
         requestIdToSender[requestId] = msg.sender;
-        requestIdToVechileType[requestId] = vehicleType;
+        requestIdToVehicleType[requestId] = vehicleType;
         emit NFTRequest(requestId, _numWords);
     }
 
@@ -126,9 +126,9 @@ contract MooveNFT is VRFConsumerBaseV2Plus, ERC721URIStorage, MooveUtilsV1_1 {
 
         } else {
 
-            require(requestIdToVechileType[requestId] == 0 || requestIdToVechileType[requestId] > 3, "request vehicle type not found");
+            require(requestIdToVehicleType[requestId] == 0 || requestIdToVehicleType[requestId] > 3, "request vehicle type not found");
             require(requestIdToSender[requestId] != address(0x0), "request sender not found");
-            uint8 vehicleType = requestIdToVechileType[requestId];
+            uint8 vehicleType = requestIdToVehicleType[requestId];
             address nftOwner = requestIdToSender[requestId];
             uint256 newTokenId = tokenCounter;
             string memory tokenURI = extractTokenURI(randomWords[0], vehicleType);
