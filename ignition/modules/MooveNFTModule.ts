@@ -6,7 +6,7 @@ const CREATION_FEE = 0;
 
 const MooveNFTModule = buildModule("MooveNFTModule", (m) => {
   const subscription_id = m.getParameter("subscriptionId", VRF_SUBSCRIPTION_ID);
-  const mooveNFTModule = m.contract("MooveNFT", [subscription_id, MAX_SUPPLY, CREATION_FEE]);
+  const mooveNFTModule = m.contract("MooveManageContract", [subscription_id, MAX_SUPPLY, CREATION_FEE]);
 
   return { mooveNFTModule };
 });
