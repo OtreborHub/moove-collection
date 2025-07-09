@@ -1,7 +1,11 @@
 # moove-collection
 <h3>Moove NFT Italy Collection per Start2Impact University</h3>
 
->Il progetto **moove-collection** contiene un contratto che si occupa di gestire gli NFT e la lotteria Moove. <br>
+
+> Si immagina lo scenario in cui ogni utente che utilizza un mezzo di trasporto Moove, può scannerizzare il QRCode presente sul mezzo, e viene reindirizzato ad un applicativo front-end
+che si occuperà di chiamare la funzione di minting del contratto. Dallo stesso applicativo, l'owner può modificare la fee di creazione degli NFT, il numero massimo di NFT mintabili (maxSupply), prelevare denaro dal contratto e più importante, avviare il meccanismo della lotteria Moove.
+
+>Il progetto **moove-collection** contiene il contratto che si occupa di gestire gli NFT e la lotteria Moove. <br>
 Il contratto ha il principale compito di mintare nuovi MooveNFT e consegnarli agli utenti, dando loro la possibilità di scambiarli.<br>
 Il proprietario del contratto ha inoltre la possibilità di far partire la lotteria Moove ed estrarre l'NFT vincente.
 I contratti sono stati creati, testati e deployati per mezzo di hardhat:
@@ -32,5 +36,6 @@ La rete di testnet configurata è Sepolia, è possibile configurare un'altra ret
 
 >npx hardhat ignition deploy ./ignition/modules/\<NomeContratto>.ts --network sepolia --reset
 
-> Contratto: https://sepolia.etherscan.io/address/0xF809C38F785af25E5CF6633fa82955ea56a6adf4
+<h3> Contratto </h3>
+Sepolia Etherscan: https://sepolia.etherscan.io/address/0xF809C38F785af25E5CF6633fa82955ea56a6adf4
 
