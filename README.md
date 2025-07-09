@@ -13,7 +13,7 @@ I contratti sono stati creati, testati e deployati per mezzo di hardhat:
 ><br>
 
 >Come anticipato il contratto MooveManageContract estende due contratti:
-> - **ERC721URIStorage** (OpenZeppelin contract): Contratto base per l'estensione del protocollo ERC721 che, oltre a garantire il minting e lo scambio di NFT, <br>
+> - **ERC721URIStorage** (OpenZeppelin contract): Contratto base per l'estensione del protocollo ERC721 che, oltre a garantire il minting e lo scambio di NFT,
 tramite l'implementazione del metodo _setTokenUri, permette l'inserimento di tokenURI personalizzati. <br>
 > - **VRFConsumerBaseV2Plus** (Chainlink contract): Contratto base in grado di comunicare con i servizi Chainlink VRF: viene usato da Moove per ricevere numeri random verificati sulla base della quale viene scelto sia il tokenURI degli NFT mintati sia il tokenID vincitore della lotteria Moove. <br>
 
@@ -32,5 +32,5 @@ La rete di testnet configurata è Sepolia, è possibile configurare un'altra ret
 
 >npx hardhat ignition deploy ./ignition/modules/\<NomeContratto>.ts --network sepolia --reset
 
-
+> Contratto: https://sepolia.etherscan.io/address/0xF809C38F785af25E5CF6633fa82955ea56a6adf4
 
