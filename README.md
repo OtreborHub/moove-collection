@@ -1,5 +1,5 @@
 # moove-collection
-<h3>Moove NFT Italy Collaction per Start2Impact University</h3>
+<h3>Moove NFT Italy Collection per Start2Impact University</h3>
 
 >Il progetto **moove-collection** contiene un contratto che si occupa di gestire gli NFT e la lotteria Moove. <br>
 Il contratto ha il principale compito di mintare nuovi MooveNFT e consegnarli agli utenti, dando loro la possibilità di scambiarli.<br>
